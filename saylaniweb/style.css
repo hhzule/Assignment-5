@@ -1,0 +1,173 @@
+body{
+    background-color:white;
+}
+
+.html, .body{
+	width: 100%; height: 100%;
+	background-color:white;
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	
+}
+
+.body{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items:center;
+	color:rgb(248, 94, 94);
+}
+.box{
+	width: 600px; height: 300px;
+	background-color:rgb(245, 248, 242);
+	position: relative;
+	box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.75);
+}
+.box:after, .box:before{
+	mix-blend-mode:multiply;
+	filter:none;
+	z-index: -1;
+	content:'';
+	width:calc(100% + (50px * 2));
+	height:calc(100% + (50px * 2));
+	position: absolute;
+	display: block;
+	animation: border 10s ease-in-out infinite;
+	transform:translateX(-50px) translateY(-50px);
+}
+@keyframes border {
+  0%, 100% {
+    -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+            clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+  }
+  50% {
+    -webkit-clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+            clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+  }
+}
+
+.box:after{
+	animation-delay: -5s;
+	background-color: #fa90da;
+	clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+}
+.box:before {
+	background-color: rgb(170, 236, 252);
+	  clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+}
+
+.box:hover:after{
+	animation-delay: -0.1s;
+}
+.box:hover:before, .box:hover:after {
+
+          animation-duration: 0.2s;
+}
+.card-group{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.program{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.program{
+    margin-top: 20px;
+    background-color:white;
+    border-radius: 40px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border: cornsilk;
+    /* box-shadow:5px 5px 5px 5px rgb(190, 128, 248); */
+}
+.footerdiv{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+
+/* footer */
+
+section{
+	text-align:center;
+  }
+  .footer #button{
+	  width:35px;
+	  height:35px;
+	  border: #727172 12px solid;
+	  border-radius:35px;
+	  margin:0 auto;
+	  position:relative;
+	  -webkit-transition: all 1s ease;
+	  -moz-transition: all 1s ease;
+	  -o-transition: all 1s ease;
+	  -ms-transition: all 1s ease;
+	  transition: all 1s ease;
+  }
+  .footer #button:hover{
+	  width:35px;
+	  height:35px;
+	  border: #3A3A3A 12px solid;
+	  -webkit-transition: all 1s ease;
+	  -moz-transition: all 1s ease;
+	  -o-transition: all 1s ease;
+	  -ms-transition: all 1s ease;
+	  transition: all 1s ease;
+	  position:relative;
+  }
+  .footer {
+	  bottom:0;
+	  left:0;
+	  position:fixed;
+	  width: 100%;
+	  height: 2em;
+	  overflow:hidden;
+	  margin:0 auto;
+	  -webkit-transition: all 1s ease;
+	  -moz-transition: all 1s ease;
+	  -o-transition: all 1s ease;
+	  -ms-transition: all 1s ease;
+	  transition: all 1s ease;
+	  z-index:999;
+  }
+  .footer:hover {
+	  -webkit-transition: all 1s ease;
+	  -moz-transition: all 1s ease;
+	  -o-transition: all 1s ease;
+	  -ms-transition: all 1s ease;
+	  transition: all 1s ease;
+	  height: 10em;
+  }
+  .footer #container{
+	  margin-top:5px;
+	  width:100%;
+  height:100%;
+	position:relative;
+	top:0;
+	left:0;
+	  background: #3A3A3A;
+  }
+  .footer #cont{
+	position:relative;
+	top:-45px;
+	right:190px;
+	  width:150px;
+	  height:auto;
+	  margin:0 auto;
+  }
+  .footer_center{
+	  width:500px;
+	  float:left;
+	text-align:center;
+  }
+  .footer h3{
+	  font-family: 'Helvetica';
+	  font-size: 30px;
+	  font-weight: 100;
+	  margin-top:70px;
+	  margin-left:40px;
+  }
